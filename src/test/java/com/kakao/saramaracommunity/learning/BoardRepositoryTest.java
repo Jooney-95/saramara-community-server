@@ -4,6 +4,7 @@ import com.kakao.saramaracommunity.board.entity.Board;
 import com.kakao.saramaracommunity.board.repository.BoardRepository;
 import com.kakao.saramaracommunity.member.entity.Member;
 import com.kakao.saramaracommunity.member.repository.MemberRepository;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,7 @@ import static com.kakao.saramaracommunity.fixture.MemberFixture.NORMAL_MEMBER_SO
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
+@Transactional
 public class BoardRepositoryTest {
 
     @Autowired
